@@ -15,8 +15,8 @@ def get_spatial_scale(wcs, assert_square=True):
     if assert_square:
         try:
             np.testing.assert_almost_equal(abs(cdelt[0,0]), abs(cdelt[0,1]))
-            np.testing.assert_almost_equal(abs(pc[0,0]), abs(pc[1,1]))
-            np.testing.assert_almost_equal(abs(scale[0,0]), abs(scale[0,1]))
+            #np.testing.assert_almost_equal(abs(pc[0,0]), abs(pc[1,1]))
+            #np.testing.assert_almost_equal(abs(scale[0,0]), abs(scale[0,1]))
         except AssertionError:
             raise ValueError("Non-square pixels.  Please resample data.")
 
